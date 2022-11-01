@@ -1,0 +1,105 @@
+const smtps = [
+  // {
+  //   host: "smtpout.secureserver.net",
+  //   port: 587,
+  //   secure: false,
+  //   auth: {
+  //     user: "greg@globalrockstar.net",
+  //     pass: "sail100",
+  //   },
+  //   from_email: "pashley@appinfoinc.com",
+  // }
+];
+
+let setup = {
+  key: "",
+  multipleSmtp: "QUEUE", // "ROTATE" AND "QUEUE"
+  mail_priority: "high", // high , medium, low
+  sleep_time: 1000, // 1000 for 1 second (can setup 0) ->
+  perbatch: 10,
+  from_name: "Coba From Name",
+  mail_subject: "<# RANDNUM5 #> Ini Subject",
+
+  letter: "letter.html",
+  mailist: "mailist.txt",
+  letterToImage: false,
+  letterToImageFile: "letterToImage.html",
+};
+
+// send multiple attachment as youu want
+
+// const attachments = [
+//   {
+//     // file on disk as an attachment
+//     filename: "attachments.html",
+//     path: "attachment.html", // stream this file
+//     htmlToPdf: true, //only for html content
+//   },
+//   {
+//     // file on disk as an attachment
+//     filename: "attachments.html",
+//     path: "attachment.html", // stream this file
+//     htmlToPdf: false, //only for html content
+//   },
+// ];
+const attachments = [];
+
+const setup_time_date = {
+  time_zone: "America/Adak",
+};
+
+// //generate your number random
+const generate_random_number = [
+  {
+    function_name: "RANDNUM1",
+    length: 1,
+  },
+  {
+    function_name: "RANDNUM2",
+    length: 2,
+  },
+  {
+    function_name: "RANDNUM3",
+    length: 3,
+  },
+  {
+    function_name: "RANDNUM4",
+    length: 4,
+  },
+  {
+    function_name: "RANDNUM5",
+    length: 5,
+  },
+];
+
+const generate_random_string = [
+  {
+    function_name: "RANDSTR3",
+    length: 3,
+    type: "UPPERCASE", // "UPPERCASE","LOWERCASE","RANDOM"
+  },
+  {
+    function_name: "RANDSTR4",
+    length: 4,
+    type: "LOWERCASE", // "UPPERCASE","LOWERCASE","RANDOM"
+  },
+];
+
+const apply_function = [
+  {
+    function_name: "Company_NAME",
+    value: "TRalalal.Inc",
+  },
+];
+
+module.exports = {
+  smtps,
+  setup,
+  generate_random_number,
+  generate_random_string,
+  apply_function,
+  setup_time_date,
+  attachments,
+  // myLOGO,
+  // attachment_EML,
+};

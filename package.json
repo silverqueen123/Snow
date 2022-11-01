@@ -1,0 +1,14 @@
+{
+  "name": "snow",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "snow": "Snow.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "html-pdf-node": "^1.0.8",
+    "node-html-to-image": "^3.2.4",
+    "nodemailer": "^6.7.8"
+  }
+}
